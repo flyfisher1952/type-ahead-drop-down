@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Typeahead } from "react-bootstrap-typeahead";
 import AddWater from "./components/addWater/addWater.js";
 
@@ -20,16 +20,21 @@ const App = () => {
 
     const countryFilter = (option, props) => option.name.toLowerCase().indexOf(props.text.toLowerCase()) !== -1;
 
+    const stateTaRef = useRef(null);
+    const waterTaRef = useRef(null);
+
     const handleCountryChange = (selection) => {
         const country = selection[0];
         setSelectedCountry(country);
         fetchStates(country);
+        stateTaRef.current.focus();
     };
 
     const handleStateChange = (selection) => {
         const state = selection[0];
         setSelectedState(state);
         fetchWaters(state);
+        waterTaRef.current.focus();
     };
 
     const handleWaterChange = (selection) => {
@@ -43,20 +48,19 @@ const App = () => {
         }
     };
 
-    // eslint-disable-next-line no-unused-vars
     const fetchWaters = (state) => {
         if (state) {
-            const waters = waterData.filter((water) => water.state_id === state.id);
+            const waters = waterData.filter((water) => water.state_id === state.id).sort((water) => water.name);
             setWaterList(waters);
         }
     };
 
     const handleAddWater = (newWater) => {
-        debugger;
-        const newWaterList = waterList.concat([newWater]);
+        const newWaterList = [newWater].concat(waterList);
 
         setWaterList(newWaterList);
         setSelectedWater(newWater);
+        waterTaRef.current.focus();
     };
 
     return (
@@ -75,7 +79,7 @@ const App = () => {
                 <div className="row">
                     <div className="col-1 label-col"> State:</div>
                     <div className="col-3">
-                        <Typeahead id="st-dd" labelKey="name" options={stateList} onChange={handleStateChange} />
+                        <Typeahead id="st-dd" ref={stateTaRef} labelKey="name" options={stateList} onChange={handleStateChange} />
                     </div>
                     <div className="col-1 label-col">&nbsp;</div>
                     <div className="col-7 info-col">
@@ -85,7 +89,7 @@ const App = () => {
                 <div className="row">
                     <div className="col-1 label-col"> Water:</div>
                     <div className="col-3">
-                        <Typeahead id="wtr-dd" labelKey="name" options={waterList} onChange={handleWaterChange} />
+                        <Typeahead id="wtr-dd" ref={waterTaRef} labelKey="name" options={waterList} onChange={handleWaterChange} />
                     </div>
                     <div className="col-1 info-col">
                         <AddWater onAdded={handleAddWater} />
