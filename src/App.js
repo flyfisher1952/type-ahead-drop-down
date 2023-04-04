@@ -27,7 +27,7 @@ const App = () => {
         const country = selection[0];
         setSelectedCountry(country);
         fetchStates(country);
-        stateTaRef.current.focus();
+        stateTaRef.current.focus(); 
     };
 
     const handleStateChange = (selection) => {
