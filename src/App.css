@@ -10,7 +10,7 @@
 }
 
 .App .row {
-    margin: .1rem;
+    margin: 0.1rem;
 }
 
 .label-col {
@@ -19,12 +19,6 @@
 
 .info-col {
     text-align: left;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
 }
 
 .App-header {
@@ -45,6 +39,16 @@
 .App .row {
     background-color: #e0e0f0;
     padding: 1rem;
+}
+
+svg {
+    cursor: pointer;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 @keyframes App-logo-spin {

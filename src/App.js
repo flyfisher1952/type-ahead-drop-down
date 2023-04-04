@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Typeahead } from "react-bootstrap-typeahead";
+import AddWater from "./components/addWater/addWater.js";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -43,29 +44,19 @@ const App = () => {
     };
 
     // eslint-disable-next-line no-unused-vars
-    const apiFetchWaters = (state) => {
-        if (state) {
-            fetch("http://localhost:3033/water/state/" + state.id)
-                .then((response) => {
-                    if (response.ok) {
-                        return response.json();
-                    }
-                    throw response;
-                })
-                .then((waters) => {
-                    setWaterList(waters);
-                })
-                .catch((error) => console.log("FETCH waters ERROR: ", error));
-        }
-    };
-
-    // eslint-disable-next-line no-unused-vars
     const fetchWaters = (state) => {
         if (state) {
-            debugger;
             const waters = waterData.filter((water) => water.state_id === state.id);
             setWaterList(waters);
         }
+    };
+
+    const handleAddWater = (newWater) => {
+        debugger;
+        const newWaterList = waterList.concat([newWater]);
+
+        setWaterList(newWaterList);
+        setSelectedWater(newWater);
     };
 
     return (
@@ -76,7 +67,8 @@ const App = () => {
                     <div className="col-3">
                         <Typeahead id="ctry-dd" labelKey="name" filterBy={countryFilter} options={countryList} onChange={handleCountryChange} />
                     </div>
-                    <div className="col-8 info-col">
+                    <div className="col-1 label-col">&nbsp;</div>
+                    <div className="col-7 info-col">
                         <div>{JSON.stringify(selectedCountry)}</div>
                     </div>
                 </div>
@@ -85,7 +77,8 @@ const App = () => {
                     <div className="col-3">
                         <Typeahead id="st-dd" labelKey="name" options={stateList} onChange={handleStateChange} />
                     </div>
-                    <div className="col-8 info-col">
+                    <div className="col-1 label-col">&nbsp;</div>
+                    <div className="col-7 info-col">
                         <div>{JSON.stringify(selectedState)}</div>
                     </div>
                 </div>
@@ -94,7 +87,10 @@ const App = () => {
                     <div className="col-3">
                         <Typeahead id="wtr-dd" labelKey="name" options={waterList} onChange={handleWaterChange} />
                     </div>
-                    <div className="col-8 info-col">
+                    <div className="col-1 info-col">
+                        <AddWater onAdded={handleAddWater} />
+                    </div>
+                    <div className="col-7 info-col">
                         <div>{JSON.stringify(selectedWater)}</div>
                     </div>
                 </div>

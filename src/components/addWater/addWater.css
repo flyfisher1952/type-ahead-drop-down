@@ -1,0 +1,14 @@
+.fa-circle-plus {
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.modal-body > table {
+    width: 100%;
+}
+
+.pu-label-cell {
+    padding-top: 12px;
+    padding-right: 6px;
+    float: right;
+}
