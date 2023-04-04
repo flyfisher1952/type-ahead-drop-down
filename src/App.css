@@ -15,10 +15,12 @@
 
 .label-col {
     text-align: right;
+    color: white;
 }
 
 .info-col {
     text-align: left;
+    color: white;
 }
 
 .App-header {
@@ -37,7 +39,7 @@
 }
 
 .App .row {
-    background-color: #e0e0f0;
+    background-color: #161689;
     padding: 1rem;
 }
 
