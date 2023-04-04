@@ -1,0 +1,92 @@
+[
+	{
+		"id" : 1,
+		"name" : "1st Dam",
+		"water_id" : 1,
+		"is_deleted" : 0
+	},
+	{
+		"id" : 2,
+		"name" : "1st Dam",
+		"water_id" : 2,
+		"is_deleted" : 0
+	},
+	{
+		"id" : 3,
+		"name" : "2nd Dam",
+		"water_id" : 2,
+		"is_deleted" : 0
+	},
+	{
+		"id" : 4,
+		"name" : "3rd Dam",
+		"water_id" : 2,
+		"is_deleted" : 0
+	},
+	{
+		"id" : 5,
+		"name" : "The Dugway",
+		"water_id" : 2,
+		"is_deleted" : 0
+	},
+	{
+		"id" : 10,
+		"name" : "Boys Scout Camp",
+		"water_id" : 1,
+		"is_deleted" : 0
+	},
+	{
+		"id" : 11,
+		"name" : "Box Canyon",
+		"water_id" : 4,
+		"is_deleted" : 0
+	},
+	{
+		"id" : 12,
+		"name" : "Railroad Ranch",
+		"water_id" : 4,
+		"is_deleted" : 0
+	},
+	{
+		"id" : 13,
+		"name" : "Cardiac Canyon",
+		"water_id" : 4,
+		"is_deleted" : 0
+	},
+	{
+		"id" : 14,
+		"name" : "Cabin Hole",
+		"water_id" : 4,
+		"is_deleted" : 0
+	},
+	{
+		"id" : 19,
+		"name" : "Surprise Falls",
+		"water_id" : 4,
+		"is_deleted" : 0
+	},
+	{
+		"id" : 20,
+		"name" : "Oneida Narrows",
+		"water_id" : 3,
+		"is_deleted" : 0
+	},
+	{
+		"id" : 21,
+		"name" : "Oneida Hwy 36 Bridge",
+		"water_id" : 3,
+		"is_deleted" : 0
+	},
+	{
+		"id" : 22,
+		"name" : "Black Canyon",
+		"water_id" : 3,
+		"is_deleted" : 0
+	},
+	{
+		"id" : 23,
+		"name" : "Rock Creek Bridge",
+		"water_id" : 2,
+		"is_deleted" : 0
+	}
+]

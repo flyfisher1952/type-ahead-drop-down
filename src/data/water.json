@@ -1,0 +1,68 @@
+[
+	{
+		"table_name" : "water",
+		"id" : 2,
+		"name" : "Logan River",
+		"state_id" : 1414,
+		"state_code" : "UT",
+		"state_name" : "Utah",
+		"country_id" : 233,
+		"country_code" : "US",
+		"country_name" : "United States"
+	},
+	{
+		"table_name" : "water",
+		"id" : 4,
+		"name" : "Henry's Fork",
+		"state_id" : 1460,
+		"state_code" : "ID",
+		"state_name" : "Idaho",
+		"country_id" : 233,
+		"country_code" : "US",
+		"country_name" : "United States"
+	},
+	{
+		"table_name" : "water",
+		"id" : 1,
+		"name" : "Blacksmith Fork River",
+		"state_id" : 1414,
+		"state_code" : "UT",
+		"state_name" : "Utah",
+		"country_id" : 233,
+		"country_code" : "US",
+		"country_name" : "United States"
+	},
+	{
+		"table_name" : "water",
+		"id" : 3,
+		"name" : "Bear River",
+		"state_id" : 1414,
+		"state_code" : "UT",
+		"state_name" : "Utah",
+		"country_id" : 233,
+		"country_code" : "US",
+		"country_name" : "United States"
+	},
+	{
+		"table_name" : "water",
+		"id" : 3,
+		"name" : "Bear River",
+		"state_id" : 1442,
+		"state_code" : "WY",
+		"state_name" : "Wyoming",
+		"country_id" : 233,
+		"country_code" : "US",
+		"country_name" : "United States"
+	},
+	{
+		"table_name" : "water",
+		"id" : 3,
+		"name" : "Bear River",
+		"state_id" : 1460,
+		"state_code" : "ID",
+		"state_name" : "Idaho",
+		"country_id" : 233,
+		"country_code" : "US",
+		"country_name" : "United States"
+	}
+]
