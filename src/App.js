@@ -60,8 +60,8 @@ const App = () => {
 
         setWaterList(newWaterList);
         setSelectedWater(newWater);
-        waterTaRef.current.focus();
-    };
+        waterTaRef.current.state.selected = [newWater];
+      };
 
     return (
         <div className="App">
